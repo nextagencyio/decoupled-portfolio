@@ -1,0 +1,51 @@
+{
+  "data": {
+    "nodeSkills": {
+      "__typename": "NodeSkillConnection",
+      "nodes": [
+        {
+          "__typename": "NodeSkill",
+          "id": "skill-1",
+          "title": "React & Next.js",
+          "path": "/skills/react",
+          "body": {
+            "processed": "<p>Expert-level proficiency in React and Next.js, including server components, the App Router, and advanced patterns like compound components, render props, and custom hooks. I have built production applications serving millions of users with these technologies.</p><p>My experience includes complex state management with Zustand and Jotai, data fetching with React Query and Apollo Client, and performance optimization through code splitting, memoization, and virtualized lists.</p>",
+            "summary": "Expert-level proficiency in React and Next.js, including server components, the App Router, and advanced patterns like compound components, render props, and custom hooks. I have built production appl"
+          },
+          "skillIcon": "code",
+          "proficiency": "Expert",
+          "yearsExperience": "7",
+          "skillCategory": "Frontend"
+        },
+        {
+          "__typename": "NodeSkill",
+          "id": "skill-2",
+          "title": "TypeScript",
+          "path": "/skills/typescript",
+          "body": {
+            "processed": "<p>Deep expertise in TypeScript including advanced type system features like conditional types, template literal types, mapped types, and type-level programming. I use TypeScript in every project to catch bugs early and improve developer experience.</p><p>I have contributed to DefinitelyTyped and authored several open-source TypeScript utilities for common patterns.</p>",
+            "summary": "Deep expertise in TypeScript including advanced type system features like conditional types, template literal types, mapped types, and type-level programming. I use TypeScript in every project to catc"
+          },
+          "skillIcon": "terminal",
+          "proficiency": "Expert",
+          "yearsExperience": "6",
+          "skillCategory": "Languages"
+        },
+        {
+          "__typename": "NodeSkill",
+          "id": "skill-3",
+          "title": "Node.js & Backend Development",
+          "path": "/skills/node-js",
+          "body": {
+            "processed": "<p>Strong backend development skills with Node.js, Express, Fastify, and tRPC. Experienced in designing RESTful and GraphQL APIs, implementing authentication and authorization, and building real-time applications with WebSockets.</p><p>I also have working knowledge of Deno and Bun for modern server-side JavaScript runtimes.</p>",
+            "summary": "Strong backend development skills with Node.js, Express, Fastify, and tRPC. Experienced in designing RESTful and GraphQL APIs, implementing authentication and authorization, and building real-time app"
+          },
+          "skillIcon": "server",
+          "proficiency": "Advanced",
+          "yearsExperience": "6",
+          "skillCategory": "Backend"
+        }
+      ]
+    }
+  }
+}

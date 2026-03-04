@@ -1,0 +1,85 @@
+{
+  "data": {
+    "nodeHomepages": {
+      "__typename": "NodeHomepageConnection",
+      "nodes": [
+        {
+          "__typename": "NodeHomepage",
+          "id": "homepage",
+          "title": "Alex Rivera - Full Stack Developer",
+          "path": "/homepage",
+          "heroTitle": "Hi, I'm Alex Rivera",
+          "heroSubtitle": "Full Stack Developer & UI/UX Enthusiast",
+          "heroDescription": {
+            "processed": "<p>I design and build beautiful, performant web applications that solve real problems. Specializing in React, TypeScript, and Node.js with a passion for clean architecture and accessible design.</p>",
+            "summary": "I design and build beautiful, performant web applications that solve real problems. Specializing in React, TypeScript, and Node.js with a passion for clean architecture and accessible design."
+          },
+          "heroImage": {
+            "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+            "alt": "Alex Rivera portrait photo",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "statsItems": [
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-projects",
+              "title": "",
+              "number": "40+",
+              "label": "Projects Completed"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-clients",
+              "title": "",
+              "number": "25",
+              "label": "Happy Clients"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-years",
+              "title": "",
+              "number": "8",
+              "label": "Years Experience"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-awards",
+              "title": "",
+              "number": "6",
+              "label": "Awards Won"
+            }
+          ],
+          "featuredItemsTitle": "Featured Projects",
+          "ctaTitle": "Let's Work Together",
+          "ctaDescription": {
+            "processed": "<p>I'm currently available for freelance projects and full-time opportunities. Whether you need a complex web application or a beautiful marketing site, I'd love to hear about your project.</p>",
+            "summary": "I'm currently available for freelance projects and full-time opportunities. Whether you need a complex web application or a beautiful marketing site, I'd love to hear about your project."
+          },
+          "ctaPrimary": "Get in Touch",
+          "ctaSecondary": "View Resume"
+        }
+      ]
+    }
+  }
+}

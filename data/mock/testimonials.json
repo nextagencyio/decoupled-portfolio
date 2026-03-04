@@ -1,0 +1,132 @@
+{
+  "data": {
+    "nodeTestimonials": {
+      "__typename": "NodeTestimonialConnection",
+      "nodes": [
+        {
+          "__typename": "NodeTestimonial",
+          "id": "testimonial-1",
+          "title": "NutriTrack Testimonial",
+          "path": "/testimonials/sarah-kim-nutritrack",
+          "body": {
+            "processed": "<p>Alex transformed our product from a struggling app into one of the highest-rated health platforms on the market. His attention to detail, understanding of user psychology, and technical excellence were evident in every interaction. The dashboard he built is not only beautiful but incredibly fast -- our users constantly comment on how smooth the experience is.</p>",
+            "summary": "Alex transformed our product from a struggling app into one of the highest-rated health platforms on the market. His attention to detail, understanding of user psychology, and technical excellence wer"
+          },
+          "clientPhoto": {
+            "url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&q=80",
+            "alt": "Sarah Kim headshot",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "clientName": "Sarah Kim",
+          "clientTitle": "CTO",
+          "clientCompany": "NutriTrack Inc.",
+          "rating": 5,
+          "projectName": "NutriTrack Health Dashboard"
+        },
+        {
+          "__typename": "NodeTestimonial",
+          "id": "testimonial-2",
+          "title": "CraftMarket Testimonial",
+          "path": "/testimonials/marcus-chen-craftmarket",
+          "body": {
+            "processed": "<p>Working with Alex was the best decision we made for our startup. He didn't just write code -- he challenged our assumptions, improved our product strategy, and delivered a platform that exceeded every metric we set. Our sellers love the dashboard, and our customers tell us the shopping experience feels premium and personal.</p>",
+            "summary": "Working with Alex was the best decision we made for our startup. He didn't just write code -- he challenged our assumptions, improved our product strategy, and delivered a platform that exceeded every"
+          },
+          "clientPhoto": {
+            "url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=80",
+            "alt": "Marcus Chen headshot",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "clientName": "Marcus Chen",
+          "clientTitle": "Co-Founder & CEO",
+          "clientCompany": "CraftMarket Co.",
+          "rating": 5,
+          "projectName": "CraftMarket E-Commerce Platform"
+        },
+        {
+          "__typename": "NodeTestimonial",
+          "id": "testimonial-3",
+          "title": "Horizon Foundation Testimonial",
+          "path": "/testimonials/lisa-oconnor-nonprofit",
+          "body": {
+            "processed": "<p>We hired Alex to rebuild our nonprofit's website and donation platform, and the result was outstanding. He was patient with our non-technical team, explained technical decisions in plain language, and delivered on time and within budget. Our online donations increased 60% in the first quarter after launch.</p>",
+            "summary": "We hired Alex to rebuild our nonprofit's website and donation platform, and the result was outstanding. He was patient with our non-technical team, explained technical decisions in plain language, and"
+          },
+          "clientPhoto": {
+            "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80",
+            "alt": "Lisa O'Connor headshot",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "clientName": "Lisa O'Connor",
+          "clientTitle": "Executive Director",
+          "clientCompany": "Horizon Foundation",
+          "rating": 5,
+          "projectName": "Horizon Foundation Website"
+        }
+      ]
+    }
+  }
+}

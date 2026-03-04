@@ -1,0 +1,186 @@
+{
+  "data": {
+    "nodeProjects": {
+      "__typename": "NodeProjectConnection",
+      "nodes": [
+        {
+          "__typename": "NodeProject",
+          "id": "project-1",
+          "title": "NutriTrack Health Dashboard",
+          "path": "/projects/nutritrack-health-dashboard",
+          "body": {
+            "processed": "<p>A comprehensive health and nutrition tracking platform that helps users monitor their dietary intake, exercise habits, and wellness goals through intuitive visualizations and personalized insights.</p><h2>The Challenge</h2><p>NutriTrack needed a web application that could handle complex nutritional data, provide real-time tracking, and deliver a delightful user experience that kept users engaged over the long term. The existing solution was a clunky native app with poor retention rates.</p><h2>My Approach</h2><p>I redesigned the entire user experience from the ground up, focusing on progressive disclosure of information and reducing friction in daily logging. The new dashboard uses D3.js for interactive charts and a custom barcode scanning feature for quick food entry.</p><h2>Results</h2><ul><li>Daily active users increased by 180%</li><li>Average session duration improved from 2.1 to 7.3 minutes</li><li>App Store rating improved from 3.2 to 4.7 stars</li><li>30-day retention rate jumped from 15% to 42%</li></ul>",
+            "summary": "A comprehensive health and nutrition tracking platform that helps users monitor their dietary intake, exercise habits, and wellness goals through intuitive visualizations and personalized insights.The"
+          },
+          "projectImage": {
+            "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+            "alt": "Health dashboard with charts and nutrition data",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "projectUrl": "https://nutritrack.example.com",
+          "githubUrl": "",
+          "technologies": [
+            "React",
+            "TypeScript",
+            "D3.js",
+            "Node.js",
+            "PostgreSQL",
+            "Redis"
+          ],
+          "clientName": "NutriTrack Inc.",
+          "projectYear": "2025",
+          "projectRole": "Lead Frontend Developer",
+          "category": [
+            {
+              "id": "Web Application",
+              "name": "Web Application"
+            },
+            {
+              "id": "SaaS Platform",
+              "name": "SaaS Platform"
+            }
+          ]
+        },
+        {
+          "__typename": "NodeProject",
+          "id": "project-2",
+          "title": "CraftMarket E-Commerce Platform",
+          "path": "/projects/craftmarket-ecommerce",
+          "body": {
+            "processed": "<p>A curated marketplace connecting independent artisans with customers who value handmade, sustainable products. The platform supports over 500 sellers and processes thousands of transactions monthly.</p><h2>The Challenge</h2><p>CraftMarket's founding team wanted to build a marketplace that felt warm and personal -- the opposite of the cold, algorithmic experience of large e-commerce platforms. They needed a solution that was easy for non-technical sellers to manage while offering sophisticated features like inventory management and shipping integration.</p><h2>My Approach</h2><p>I built a custom Next.js storefront with a headless commerce backend using Medusa.js. The seller dashboard was designed to be as simple as possible, with guided setup flows and contextual help. I integrated Stripe Connect for split payments and ShipStation for fulfillment.</p><h2>Results</h2><ul><li>Launched with 120 sellers, growing to 500+ within 6 months</li><li>Average order value of $78, well above the initial $50 target</li><li>98.5% seller satisfaction rating</li><li>Featured in TechCrunch as a \"marketplace to watch\"</li></ul>",
+            "summary": "A curated marketplace connecting independent artisans with customers who value handmade, sustainable products. The platform supports over 500 sellers and processes thousands of transactions monthly.Th"
+          },
+          "projectImage": {
+            "url": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+            "alt": "E-commerce marketplace interface on laptop",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "projectUrl": "https://craftmarket.example.com",
+          "githubUrl": "",
+          "technologies": [
+            "Next.js",
+            "TypeScript",
+            "Medusa.js",
+            "Stripe Connect",
+            "Tailwind CSS",
+            "Vercel"
+          ],
+          "clientName": "CraftMarket Co.",
+          "projectYear": "2024",
+          "projectRole": "Full Stack Developer",
+          "category": [
+            {
+              "id": "E-Commerce",
+              "name": "E-Commerce"
+            },
+            {
+              "id": "Web Application",
+              "name": "Web Application"
+            }
+          ]
+        },
+        {
+          "__typename": "NodeProject",
+          "id": "project-3",
+          "title": "OpenForm - Open Source Form Builder",
+          "path": "/projects/openform-builder",
+          "body": {
+            "processed": "<p>A powerful, self-hosted form builder and survey tool built with accessibility and developer experience as primary design goals. OpenForm supports complex logic, conditional fields, file uploads, and multi-page forms with a drag-and-drop editor.</p><h2>Motivation</h2><p>Existing form builders were either expensive SaaS products with vendor lock-in or basic open-source tools that lacked polish. I wanted to create something that offered the UX of Typeform with the flexibility of self-hosting.</p><h2>Technical Highlights</h2><ul><li>Drag-and-drop form editor built with dnd-kit</li><li>JSON Schema-based form definitions for portability</li><li>Webhook integrations with 20+ services</li><li>WCAG 2.1 AA compliant form rendering</li><li>Server-side rendering for instant load times</li></ul><h2>Community</h2><p>OpenForm has grown to over 3,200 GitHub stars and an active community of contributors. The project has been adopted by several nonprofits and educational institutions as their primary form solution.</p>",
+            "summary": "A powerful, self-hosted form builder and survey tool built with accessibility and developer experience as primary design goals. OpenForm supports complex logic, conditional fields, file uploads, and m"
+          },
+          "projectImage": {
+            "url": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
+            "alt": "Code editor showing form builder code",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "projectUrl": "https://openform.dev",
+          "githubUrl": "https://github.com/alexrivera/openform",
+          "technologies": [
+            "React",
+            "TypeScript",
+            "dnd-kit",
+            "Prisma",
+            "tRPC",
+            "Docker"
+          ],
+          "clientName": "Personal / Open Source",
+          "projectYear": "2023",
+          "projectRole": "Creator & Maintainer",
+          "category": [
+            {
+              "id": "Open Source",
+              "name": "Open Source"
+            },
+            {
+              "id": "SaaS Platform",
+              "name": "SaaS Platform"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

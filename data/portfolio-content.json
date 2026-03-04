@@ -1,0 +1,300 @@
+{
+  "model": [
+    {
+      "bundle": "homepage",
+      "label": "Homepage",
+      "description": "Personal portfolio landing page with hero, stats, and featured work",
+      "fields": [
+        { "id": "hero_title", "label": "Hero Title", "type": "string" },
+        { "id": "hero_subtitle", "label": "Hero Subtitle", "type": "string" },
+        { "id": "hero_description", "label": "Hero Description", "type": "text" },
+        { "id": "hero_image", "label": "Hero Image", "type": "image" },
+        { "id": "stats_items", "label": "Statistics", "type": "paragraph(stat_item)[]" },
+        { "id": "featured_items_title", "label": "Featured Items Title", "type": "string" },
+        { "id": "cta_title", "label": "CTA Title", "type": "string" },
+        { "id": "cta_description", "label": "CTA Description", "type": "text" },
+        { "id": "cta_primary", "label": "Primary CTA", "type": "string" },
+        { "id": "cta_secondary", "label": "Secondary CTA", "type": "string" }
+      ]
+    },
+    {
+      "bundle": "project",
+      "label": "Project",
+      "description": "A portfolio project or case study",
+      "body": true,
+      "fields": [
+        { "id": "project_image", "label": "Project Image", "type": "image" },
+        { "id": "project_url", "label": "Project URL", "type": "string" },
+        { "id": "github_url", "label": "GitHub URL", "type": "string" },
+        { "id": "technologies", "label": "Technologies", "type": "string[]" },
+        { "id": "client_name", "label": "Client", "type": "string" },
+        { "id": "project_year", "label": "Year", "type": "string" },
+        { "id": "project_role", "label": "Role", "type": "string" },
+        { "id": "category", "label": "Category", "type": "term(project_category)[]" }
+      ]
+    },
+    {
+      "bundle": "skill",
+      "label": "Skill",
+      "description": "A skill or technology proficiency",
+      "body": true,
+      "fields": [
+        { "id": "skill_icon", "label": "Skill Icon", "type": "string" },
+        { "id": "proficiency", "label": "Proficiency Level", "type": "string" },
+        { "id": "years_experience", "label": "Years of Experience", "type": "string" },
+        { "id": "skill_category", "label": "Skill Category", "type": "string" }
+      ]
+    },
+    {
+      "bundle": "testimonial",
+      "label": "Testimonial",
+      "description": "Client testimonial or recommendation",
+      "body": true,
+      "fields": [
+        { "id": "client_photo", "label": "Client Photo", "type": "image" },
+        { "id": "client_name", "label": "Client Name", "type": "string!" },
+        { "id": "client_title", "label": "Client Title", "type": "string" },
+        { "id": "client_company", "label": "Client Company", "type": "string" },
+        { "id": "rating", "label": "Rating", "type": "integer" },
+        { "id": "project_name", "label": "Related Project", "type": "string" }
+      ]
+    },
+    {
+      "bundle": "page",
+      "label": "Basic Page",
+      "description": "Static content pages for about, contact, resume, etc.",
+      "body": true,
+      "fields": []
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "stat_item",
+      "label": "Statistic Item",
+      "fields": [
+        { "id": "number", "label": "Number", "type": "string!" },
+        { "id": "label", "label": "Label", "type": "string!" }
+      ]
+    }
+  ],
+  "taxonomies": [
+    {
+      "vocabulary": "project_category",
+      "label": "Project Category",
+      "terms": ["Web Application", "Mobile App", "E-Commerce", "SaaS Platform", "Open Source", "Design System"]
+    }
+  ],
+  "content": [
+    {
+      "id": "stat-projects",
+      "type": "paragraph.stat_item",
+      "values": { "number": "40+", "label": "Projects Completed" }
+    },
+    {
+      "id": "stat-clients",
+      "type": "paragraph.stat_item",
+      "values": { "number": "25", "label": "Happy Clients" }
+    },
+    {
+      "id": "stat-years",
+      "type": "paragraph.stat_item",
+      "values": { "number": "8", "label": "Years Experience" }
+    },
+    {
+      "id": "stat-awards",
+      "type": "paragraph.stat_item",
+      "values": { "number": "6", "label": "Awards Won" }
+    },
+    {
+      "id": "homepage",
+      "type": "node.homepage",
+      "path": "/homepage",
+      "values": {
+        "title": "Alex Rivera - Full Stack Developer",
+        "hero_title": "Hi, I'm Alex Rivera",
+        "hero_subtitle": "Full Stack Developer & UI/UX Enthusiast",
+        "hero_description": "<p>I design and build beautiful, performant web applications that solve real problems. Specializing in React, TypeScript, and Node.js with a passion for clean architecture and accessible design.</p>",
+        "hero_image": {
+          "uri": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+          "alt": "Alex Rivera portrait photo"
+        },
+        "stats_items": ["@stat-projects", "@stat-clients", "@stat-years", "@stat-awards"],
+        "featured_items_title": "Featured Projects",
+        "cta_title": "Let's Work Together",
+        "cta_description": "<p>I'm currently available for freelance projects and full-time opportunities. Whether you need a complex web application or a beautiful marketing site, I'd love to hear about your project.</p>",
+        "cta_primary": "Get in Touch",
+        "cta_secondary": "View Resume"
+      }
+    },
+    {
+      "id": "project-1",
+      "type": "node.project",
+      "path": "/projects/nutritrack-health-dashboard",
+      "values": {
+        "title": "NutriTrack Health Dashboard",
+        "body": "<p>A comprehensive health and nutrition tracking platform that helps users monitor their dietary intake, exercise habits, and wellness goals through intuitive visualizations and personalized insights.</p><h2>The Challenge</h2><p>NutriTrack needed a web application that could handle complex nutritional data, provide real-time tracking, and deliver a delightful user experience that kept users engaged over the long term. The existing solution was a clunky native app with poor retention rates.</p><h2>My Approach</h2><p>I redesigned the entire user experience from the ground up, focusing on progressive disclosure of information and reducing friction in daily logging. The new dashboard uses D3.js for interactive charts and a custom barcode scanning feature for quick food entry.</p><h2>Results</h2><ul><li>Daily active users increased by 180%</li><li>Average session duration improved from 2.1 to 7.3 minutes</li><li>App Store rating improved from 3.2 to 4.7 stars</li><li>30-day retention rate jumped from 15% to 42%</li></ul>",
+        "project_image": {
+          "uri": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+          "alt": "Health dashboard with charts and nutrition data"
+        },
+        "project_url": "https://nutritrack.example.com",
+        "github_url": "",
+        "technologies": ["React", "TypeScript", "D3.js", "Node.js", "PostgreSQL", "Redis"],
+        "client_name": "NutriTrack Inc.",
+        "project_year": "2025",
+        "project_role": "Lead Frontend Developer",
+        "category": ["Web Application", "SaaS Platform"]
+      }
+    },
+    {
+      "id": "project-2",
+      "type": "node.project",
+      "path": "/projects/craftmarket-ecommerce",
+      "values": {
+        "title": "CraftMarket E-Commerce Platform",
+        "body": "<p>A curated marketplace connecting independent artisans with customers who value handmade, sustainable products. The platform supports over 500 sellers and processes thousands of transactions monthly.</p><h2>The Challenge</h2><p>CraftMarket's founding team wanted to build a marketplace that felt warm and personal -- the opposite of the cold, algorithmic experience of large e-commerce platforms. They needed a solution that was easy for non-technical sellers to manage while offering sophisticated features like inventory management and shipping integration.</p><h2>My Approach</h2><p>I built a custom Next.js storefront with a headless commerce backend using Medusa.js. The seller dashboard was designed to be as simple as possible, with guided setup flows and contextual help. I integrated Stripe Connect for split payments and ShipStation for fulfillment.</p><h2>Results</h2><ul><li>Launched with 120 sellers, growing to 500+ within 6 months</li><li>Average order value of $78, well above the initial $50 target</li><li>98.5% seller satisfaction rating</li><li>Featured in TechCrunch as a \"marketplace to watch\"</li></ul>",
+        "project_image": {
+          "uri": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+          "alt": "E-commerce marketplace interface on laptop"
+        },
+        "project_url": "https://craftmarket.example.com",
+        "github_url": "",
+        "technologies": ["Next.js", "TypeScript", "Medusa.js", "Stripe Connect", "Tailwind CSS", "Vercel"],
+        "client_name": "CraftMarket Co.",
+        "project_year": "2024",
+        "project_role": "Full Stack Developer",
+        "category": ["E-Commerce", "Web Application"]
+      }
+    },
+    {
+      "id": "project-3",
+      "type": "node.project",
+      "path": "/projects/openform-builder",
+      "values": {
+        "title": "OpenForm - Open Source Form Builder",
+        "body": "<p>A powerful, self-hosted form builder and survey tool built with accessibility and developer experience as primary design goals. OpenForm supports complex logic, conditional fields, file uploads, and multi-page forms with a drag-and-drop editor.</p><h2>Motivation</h2><p>Existing form builders were either expensive SaaS products with vendor lock-in or basic open-source tools that lacked polish. I wanted to create something that offered the UX of Typeform with the flexibility of self-hosting.</p><h2>Technical Highlights</h2><ul><li>Drag-and-drop form editor built with dnd-kit</li><li>JSON Schema-based form definitions for portability</li><li>Webhook integrations with 20+ services</li><li>WCAG 2.1 AA compliant form rendering</li><li>Server-side rendering for instant load times</li></ul><h2>Community</h2><p>OpenForm has grown to over 3,200 GitHub stars and an active community of contributors. The project has been adopted by several nonprofits and educational institutions as their primary form solution.</p>",
+        "project_image": {
+          "uri": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
+          "alt": "Code editor showing form builder code"
+        },
+        "project_url": "https://openform.dev",
+        "github_url": "https://github.com/alexrivera/openform",
+        "technologies": ["React", "TypeScript", "dnd-kit", "Prisma", "tRPC", "Docker"],
+        "client_name": "Personal / Open Source",
+        "project_year": "2023",
+        "project_role": "Creator & Maintainer",
+        "category": ["Open Source", "SaaS Platform"]
+      }
+    },
+    {
+      "id": "skill-1",
+      "type": "node.skill",
+      "path": "/skills/react",
+      "values": {
+        "title": "React & Next.js",
+        "body": "<p>Expert-level proficiency in React and Next.js, including server components, the App Router, and advanced patterns like compound components, render props, and custom hooks. I have built production applications serving millions of users with these technologies.</p><p>My experience includes complex state management with Zustand and Jotai, data fetching with React Query and Apollo Client, and performance optimization through code splitting, memoization, and virtualized lists.</p>",
+        "skill_icon": "code",
+        "proficiency": "Expert",
+        "years_experience": "7",
+        "skill_category": "Frontend"
+      }
+    },
+    {
+      "id": "skill-2",
+      "type": "node.skill",
+      "path": "/skills/typescript",
+      "values": {
+        "title": "TypeScript",
+        "body": "<p>Deep expertise in TypeScript including advanced type system features like conditional types, template literal types, mapped types, and type-level programming. I use TypeScript in every project to catch bugs early and improve developer experience.</p><p>I have contributed to DefinitelyTyped and authored several open-source TypeScript utilities for common patterns.</p>",
+        "skill_icon": "terminal",
+        "proficiency": "Expert",
+        "years_experience": "6",
+        "skill_category": "Languages"
+      }
+    },
+    {
+      "id": "skill-3",
+      "type": "node.skill",
+      "path": "/skills/node-js",
+      "values": {
+        "title": "Node.js & Backend Development",
+        "body": "<p>Strong backend development skills with Node.js, Express, Fastify, and tRPC. Experienced in designing RESTful and GraphQL APIs, implementing authentication and authorization, and building real-time applications with WebSockets.</p><p>I also have working knowledge of Deno and Bun for modern server-side JavaScript runtimes.</p>",
+        "skill_icon": "server",
+        "proficiency": "Advanced",
+        "years_experience": "6",
+        "skill_category": "Backend"
+      }
+    },
+    {
+      "id": "testimonial-1",
+      "type": "node.testimonial",
+      "path": "/testimonials/sarah-kim-nutritrack",
+      "values": {
+        "title": "NutriTrack Testimonial",
+        "body": "<p>Alex transformed our product from a struggling app into one of the highest-rated health platforms on the market. His attention to detail, understanding of user psychology, and technical excellence were evident in every interaction. The dashboard he built is not only beautiful but incredibly fast -- our users constantly comment on how smooth the experience is.</p>",
+        "client_photo": {
+          "uri": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&q=80",
+          "alt": "Sarah Kim headshot"
+        },
+        "client_name": "Sarah Kim",
+        "client_title": "CTO",
+        "client_company": "NutriTrack Inc.",
+        "rating": 5,
+        "project_name": "NutriTrack Health Dashboard"
+      }
+    },
+    {
+      "id": "testimonial-2",
+      "type": "node.testimonial",
+      "path": "/testimonials/marcus-chen-craftmarket",
+      "values": {
+        "title": "CraftMarket Testimonial",
+        "body": "<p>Working with Alex was the best decision we made for our startup. He didn't just write code -- he challenged our assumptions, improved our product strategy, and delivered a platform that exceeded every metric we set. Our sellers love the dashboard, and our customers tell us the shopping experience feels premium and personal.</p>",
+        "client_photo": {
+          "uri": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=80",
+          "alt": "Marcus Chen headshot"
+        },
+        "client_name": "Marcus Chen",
+        "client_title": "Co-Founder & CEO",
+        "client_company": "CraftMarket Co.",
+        "rating": 5,
+        "project_name": "CraftMarket E-Commerce Platform"
+      }
+    },
+    {
+      "id": "testimonial-3",
+      "type": "node.testimonial",
+      "path": "/testimonials/lisa-oconnor-nonprofit",
+      "values": {
+        "title": "Horizon Foundation Testimonial",
+        "body": "<p>We hired Alex to rebuild our nonprofit's website and donation platform, and the result was outstanding. He was patient with our non-technical team, explained technical decisions in plain language, and delivered on time and within budget. Our online donations increased 60% in the first quarter after launch.</p>",
+        "client_photo": {
+          "uri": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80",
+          "alt": "Lisa O'Connor headshot"
+        },
+        "client_name": "Lisa O'Connor",
+        "client_title": "Executive Director",
+        "client_company": "Horizon Foundation",
+        "rating": 5,
+        "project_name": "Horizon Foundation Website"
+      }
+    },
+    {
+      "id": "page-about",
+      "type": "node.page",
+      "path": "/about",
+      "values": {
+        "title": "About Me",
+        "body": "<p>I'm Alex Rivera, a full stack developer based in Portland, Oregon. I've been building web applications professionally for over 8 years, working with startups, agencies, and enterprise clients to create digital products that users love.</p><h2>My Journey</h2><p>I fell in love with programming while tinkering with websites as a teenager. After earning a B.S. in Computer Science from the University of Washington, I joined a boutique digital agency where I honed my skills across the full stack. In 2020, I went independent to focus on projects that align with my values -- sustainability, accessibility, and open source.</p><h2>What I Believe</h2><ul><li><strong>User-first design</strong> - Technology should serve people, not the other way around</li><li><strong>Clean code</strong> - Readable, well-tested code is a competitive advantage</li><li><strong>Accessibility matters</strong> - The web should be usable by everyone</li><li><strong>Continuous learning</strong> - I dedicate time each week to learning new technologies</li></ul><h2>When I'm Not Coding</h2><p>You'll find me hiking in the Pacific Northwest, roasting coffee beans, contributing to open source projects, or mentoring aspiring developers through Code for Portland.</p>"
+      }
+    },
+    {
+      "id": "page-contact",
+      "type": "node.page",
+      "path": "/contact",
+      "values": {
+        "title": "Get in Touch",
+        "body": "<p>I'd love to hear about your project. Whether you have a detailed specification or just an idea you'd like to explore, I'm happy to chat.</p><h2>How to Reach Me</h2><ul><li><strong>Email:</strong> alex@alexrivera.dev</li><li><strong>LinkedIn:</strong> linkedin.com/in/alexrivera</li><li><strong>GitHub:</strong> github.com/alexrivera</li><li><strong>Twitter:</strong> @alexriveradev</li></ul><h2>Availability</h2><p>I'm currently available for new projects starting in Q2 2026. I typically take on 1-2 client projects at a time to ensure dedicated attention and quality work.</p><h2>What to Include</h2><p>When reaching out, it's helpful to include a brief description of your project, your timeline, and your approximate budget range. This helps me determine if I'm the right fit and respond with relevant information quickly.</p>"
+      }
+    }
+  ]
+}
