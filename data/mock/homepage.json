@@ -45,28 +45,28 @@
               "__typename": "ParagraphStatItem",
               "id": "stat-projects",
               "title": "",
-              "number": "40+",
+              "number": "40+", "value": "40+",
               "label": "Projects Completed"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-clients",
               "title": "",
-              "number": "25",
+              "number": "25", "value": "25",
               "label": "Happy Clients"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-years",
               "title": "",
-              "number": "8",
+              "number": "8", "value": "8",
               "label": "Years Experience"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-awards",
               "title": "",
-              "number": "6",
+              "number": "6", "value": "6",
               "label": "Awards Won"
             }
           ],
