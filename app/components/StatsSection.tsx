@@ -17,7 +17,7 @@ export default function StatsSection({ homepageContent }: StatsSectionProps) {
           <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-4">
             {stats.map((stat: any, i: number) => (
               <span key={stat.id || i} className="flex items-center gap-x-3">
-                <span className="font-display font-black text-2xl text-white">{stat.value || stat.statValue}</span>
+                <span className="font-display font-black text-2xl text-white">{stat.value || stat.number || stat.statValue}</span>
                 <span className="text-sm text-primary-400">{stat.label || stat.statLabel || stat.title}</span>
               </span>
             ))}
