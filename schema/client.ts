@@ -1,15 +1,16 @@
 /**
- * Stub typed client — replaced by `npm run sync-schema`.
+ * Typed client with full route query support for all content types.
  *
  * Run `npx decoupled-cli schema sync` after connecting to a Drupal space
- * to generate the real typed client with interfaces and queries.
+ * to regenerate schema files (types.ts, schema.graphql, introspection.json).
  */
 
 import type { DecoupledClient } from 'decoupled-client'
 import type { DrupalNode } from 'decoupled-client'
 import type { QueryOptions } from 'decoupled-client'
+import { GET_NODE_BY_PATH } from '@/lib/queries'
 
-// Placeholder types — sync-schema will replace with actual content types
+// Placeholder types -- sync-schema will replace with actual content types
 export type ContentNode = DrupalNode
 export type ContentTypeName = string
 
@@ -24,21 +25,13 @@ export interface TypedClient {
   raw<T = any>(query: string, variables?: Record<string, any>): Promise<T>
 }
 
-// Stub factory — uses raw queryByPath with a basic route query
+// Factory -- uses GET_NODE_BY_PATH which covers all content types
 export function createTypedClient(client: DecoupledClient): TypedClient {
   return {
     async getEntries() { return [] },
     async getEntry() { return null },
     async getEntryByPath(path) {
-      return client.queryByPath(path, `
-        query ($path: String!) {
-          route(path: $path) {
-            ... on RouteInternal {
-              entity { ... on NodePage { __typename id title path body { processed } } }
-            }
-          }
-        }
-      `)
+      return client.queryByPath(path, GET_NODE_BY_PATH)
     },
     async raw(query, variables) { return client.query(query, variables) },
   }

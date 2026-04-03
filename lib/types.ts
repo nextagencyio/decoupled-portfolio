@@ -2,10 +2,11 @@ export interface DrupalNode {
   id: string
   title: string
   path: string
-  created: {
+  __typename?: string
+  created?: {
     timestamp: number
   }
-  changed: {
+  changed?: {
     timestamp: number
   }
 }
@@ -28,12 +29,14 @@ export interface DrupalProject extends DrupalNode {
     processed: string
     summary?: string
   }
-  projectCategory?: string
+  category?: Array<{ name: string }>
   clientName?: string
-  year?: string
+  projectYear?: string
   projectUrl?: string
-  image?: DrupalImage
-  featured?: boolean
+  githubUrl?: string
+  projectRole?: string
+  technologies?: string[]
+  projectImage?: DrupalImage
 }
 
 export interface ProjectData {
@@ -46,9 +49,10 @@ export interface DrupalSkill extends DrupalNode {
   body?: {
     processed: string
   }
-  proficiencyLevel?: string
-  yearsExperience?: number
-  image?: DrupalImage
+  proficiency?: string
+  yearsExperience?: string
+  skillIcon?: string
+  skillCategory?: string
 }
 
 export interface SkillData {
@@ -63,8 +67,9 @@ export interface DrupalTestimonial extends DrupalNode {
   }
   clientName?: string
   projectName?: string
-  role?: string
-  photo?: DrupalImage
+  clientTitle?: string
+  clientCompany?: string
+  clientPhoto?: DrupalImage
   rating?: number
 }
 
@@ -80,15 +85,21 @@ export interface DrupalPage extends DrupalNode {
   }
 }
 
+export interface DrupalStatItem {
+  id: string
+  number?: string
+  label?: string
+}
+
 export interface DrupalHomepage extends DrupalNode {
   heroTitle?: string
   heroSubtitle?: string
   heroDescription?: {
     processed: string
   }
-  featuresTitle?: string
-  featuresSubtitle?: string
-  featuresItems?: DrupalFeature[]
+  heroImage?: DrupalImage
+  statsItems?: DrupalStatItem[]
+  featuredItemsTitle?: string
   ctaTitle?: string
   ctaDescription?: {
     processed: string

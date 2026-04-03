@@ -19,11 +19,18 @@ export const GET_PROJECT_TEASERS = gql`
             processed
             summary
           }
-          projectCategory
+          category {
+            ... on TermProjectCategory {
+              name
+            }
+          }
           clientName
-          year
+          projectYear
           projectUrl
-          image {
+          githubUrl
+          projectRole
+          technologies
+          projectImage {
             url
             alt
             width
@@ -35,7 +42,6 @@ export const GET_PROJECT_TEASERS = gql`
               height
             }
           }
-          featured
         }
       }
     }
@@ -59,20 +65,10 @@ export const GET_SKILL_TEASERS = gql`
           body {
             processed
           }
-          proficiencyLevel
+          proficiency
           yearsExperience
-          image {
-            url
-            alt
-            width
-            height
-            variations(styles: [LARGE, MEDIUM, THUMBNAIL]) {
-              name
-              url
-              width
-              height
-            }
-          }
+          skillIcon
+          skillCategory
         }
       }
     }
@@ -98,8 +94,9 @@ export const GET_TESTIMONIAL_TEASERS = gql`
           }
           clientName
           projectName
-          role
-          photo {
+          clientTitle
+          clientCompany
+          clientPhoto {
             url
             alt
             width
@@ -127,12 +124,14 @@ export const GET_HOMEPAGE_DATA = gql`
         path
         heroTitle
         heroSubtitle
-        heroDescription { processed summary }
+        heroDescription { processed }
         heroImage { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
-        statsItems { ... on ParagraphStatItem { id title description { processed } icon } }
+        statsItems {
+          ... on ParagraphStatItem { id number label }
+        }
         featuredItemsTitle
         ctaTitle
-        ctaDescription { processed summary }
+        ctaDescription { processed }
         ctaPrimary
         ctaSecondary
       }
@@ -146,15 +145,19 @@ export const GET_NODE_BY_PATH = gql`
       ... on RouteInternal {
         entity {
           ... on NodePage {
+            __typename
             id
             title
+            path
             body {
               processed
             }
           }
           ... on NodeProject {
+            __typename
             id
             title
+            path
             body {
               processed
             }
@@ -164,11 +167,18 @@ export const GET_NODE_BY_PATH = gql`
             changed {
               timestamp
             }
-            projectCategory
+            category {
+              ... on TermProjectCategory {
+                name
+              }
+            }
             clientName
-            year
+            projectYear
             projectUrl
-            image {
+            githubUrl
+            projectRole
+            technologies
+            projectImage {
               url
               alt
               width
@@ -180,39 +190,33 @@ export const GET_NODE_BY_PATH = gql`
                 height
               }
             }
-            featured
           }
           ... on NodeSkill {
+            __typename
             id
             title
+            path
             body {
               processed
             }
-            proficiencyLevel
+            proficiency
             yearsExperience
-            image {
-              url
-              alt
-              width
-              height
-              variations(styles: [LARGE, MEDIUM, THUMBNAIL]) {
-                name
-                url
-                width
-                height
-              }
-            }
+            skillIcon
+            skillCategory
           }
           ... on NodeTestimonial {
+            __typename
             id
             title
+            path
             body {
               processed
             }
             clientName
             projectName
-            role
-            photo {
+            clientTitle
+            clientCompany
+            clientPhoto {
               url
               alt
               width
@@ -227,6 +231,7 @@ export const GET_NODE_BY_PATH = gql`
             rating
           }
           ... on NodeHomepage {
+            __typename
             id
             title
             heroTitle
@@ -234,18 +239,20 @@ export const GET_NODE_BY_PATH = gql`
             heroDescription {
               processed
             }
-            featuresTitle
-            featuresSubtitle
-            featuresItems {
-              ... on ParagraphFeatureItem {
+            heroImage {
+              url
+              alt
+              width
+              height
+            }
+            statsItems {
+              ... on ParagraphStatItem {
                 id
-                title
-                description {
-                  processed
-                }
-                icon
+                number
+                label
               }
             }
+            featuredItemsTitle
             ctaTitle
             ctaDescription {
               processed
